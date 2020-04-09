@@ -208,6 +208,7 @@
         name: "{{ pod_name_registry }}"
         image: docker.io/library/registry:2
         state: started
+        network: host
         publish:
           - "{{ registry_port_container }}:{{ registry_port }}"
         volumes:
